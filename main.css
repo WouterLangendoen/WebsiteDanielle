@@ -1,86 +1,109 @@
-html {
-    height: 100%;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
+
+/* Font settings en welke je wilt grebruiken */
+:root {
+    --f-sans: ;
+    --ff-secondary: ;
+
+    --fw-reg: 300;
+    --fw-bold: 900;
+
+    --clr-light: #fff;
+    --clr-dark: #303030;
+    --clr-accent: #16e0bd;
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+}
+
+@media (min-width: 800px) {
+    :root {
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
+}
+
+/* General styles */
 
 body {
-    background-color: #2F3035;
-    /* background-image: url(images/Daan.jpg); */
-    background-size: cover;
-    background-position: center;
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    margin: 0;
+    font-family: var(--ff-sans);
+    font-size: var(--fs-body);
+    line-height: 1.6;
 }
 
-header {
-    height: 100px;
-    text-align: center;
+section {
+    padding: 5em 2em;
 }
 
-nav {
-    background-color: rgba(0, 0, 0, 0.338);
-    min-height: 8vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+img {
+    display: block;
+    max-width: 100%;
 }
 
-main {
-    height: 400px;
-    text-align: center;
-    padding-top: 80px;
-    padding-left: 240px;
-    padding-right: 240px;
-}
+/* Koppen */
 
-footer {
-    height: 100px;
-    text-align: center;
-}
-
-.container {
-    margin-left: auto;
-    margin-right: auto;
-    width: 1024px;
-}
-
-.logo {
-    width: 250px;
-    height: 300px;
+h1,
+h2,
+h3 {
+    line-height: 1.1;
+    margin: 0;
 }
 
 h1 {
-    font-size: 84px;
-    color: white;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: var(--fs-h1);
+}
+h2 {
+    font-size: var(--fs-h2);
+}
+h3 {
+    font-size: var(--fs-h3);
 }
 
-p {
-    font-size: 18px;
-    color: white;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.section__title {
+    margin-bottom: .25rem;
 }
 
-.linkedin {
-    width: 80px;
-    height: 70px;
+.section__subtitle {
+    margin: 0;
+    font-size: var(--fs-h3);
 }
 
-.menu {
-    color: white;
-    font-size: 20px;
+.section__title--intro {
+    font-weight: var(--fw-reg);
 }
 
-.burger {
-    display: none;
+.section__title--intro,
+.section__subtitle--about {
+    background: var(--clr-accent);
+    font-family: var(--ff-secondary);
+    margin-bottom: 1em;
 }
 
-.burger div {
-    width: 25px;
-    height: 2px;
-    background-color: white;
-    margin: 5px;
+/* Introductie section */
+
+.intro {
+    position: relative;
 }
 
-@media screen and (max-width:768px) {
-    body {
-        display: none;
+@media (min-width: 600px) {
+    .intro {
+        display: grid;
+        grid-template-areas: 
+        "img title"
+        "img-subtitle";
+        grid-template-columns: min-content max-content;
     }
+
+    .intro__img
 }

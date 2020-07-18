@@ -7,39 +7,117 @@
     <meta name="description" content="Op deze website kunt u verschillende projecten van mij vinden, waar ik aan gewerkt heb. Ook vind u hier wat achtergrond informatie over wie ik ben.">
     <title>Danielle Gouman | Portfolio</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
 </head>
 
 
-<body>
-    <div class="container">
+    <body>
 
         <header>
-            <!-- <img class="logo" src="images/Daan.jpg" alt="Foto van Danielle"> -->
+            <div class="logo">
+                <!-- <img src="images/Daan.jpg" alt=""> -->
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
+                    <li class="nav__item"><a href="#overmij" class="nav__link">Over mij</a></li>
+                    <li class="nav__item"><a href="#projecten" class="nav__link">Projecten</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    
+                </ul>
+            </nav>
         </header>
 
-        <nav>
-            <a href="index.html" class="menu">Home</a>
-            <a href="#" class="menu">Over mij</a>
-            <a href="#" class="menu">Projecten</a>
-            <a href="#" class="menu">CV</a>
-            <a href="#" class="menu">Contact</a>
+        <!-- Introductie -->
+        <section class="intro" id="home">
+            <h1 class="section__title section__title--intro">
+                Welkom op mijn website ik ben <strong>Danielle Gouman</strong>
+            </h1>
+            <p class="section__subtitle section__subtitle--intro">
+                Integraleveiligheidskundige
+            </p>
+            <img src="images/Daan.jpg" alt="Selfie van Danielle">
+        </section>
 
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
+
+        <!--     Services     -->
+        <section class="services" id="services">
+            <h2 class="section__title section__title--services">Services</h2>
+            <div class="service">
+                <h3>Veiligheidsplan opstellen</h3>
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
             </div>
-        </nav>
 
-        <main>
-            <h1>Portfolio</h1>
-            <p>Op deze website kunt u verschillende projecten van mij vinden, waar ik aan gewerkt heb. Ook vind u hier wat achtergrond informatie over wie ik ben.</p>
-        </main>
+            <div class="service">
+                <h3>Verslagen schrijven</h3>
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            </div>
 
+            <div class="service">
+                <h3>Documenten opstellen</h3>
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            </div>
+
+            <a href="projecten" class="btn">Mijn werk</a>
+        </section>
+
+        <!--  Over mij -->
+        
+        <section class="over-mij" id="about">
+            <h2 class="section__title section__title--about">Wie ben ik</h2>
+            <p class="section__subtitle section__subtitle--about"></p>
+
+            <div class="over-mij__body">
+                <p></p>
+                <p></p>
+            </div>
+
+            <img src="images/instagram.png" alt="Een ander plaatje van Daan">
+        </section>
+
+
+        <!-- projecten -->
+
+        <section class="projecten" id="project">
+            <h2 class="section__title">Projecten</h2>
+            <p class="section__subtitle"></p>
+
+            <div class="portfolio">
+                <a href="#" class="portfolio__item">
+                    <img src="images/linkedin.png" alt="Moet ik nog bedenken">
+                </a>
+                <a href="#" class="portfolio__item">
+                    <img src="images/linkedin.png" alt="Moet ik nog bedenken">
+                </a>
+                <a href="#" class="portfolio__item">
+                    <img src="images/linkedin.png" alt="Moet ik nog bedenken">
+                </a>
+                <a href="#" class="portfolio__item">
+                    <img src="images/linkedin.png" alt="Moet ik nog bedenken">
+                </a>
+                <a href="#" class="portfolio__item">
+                    <img src="images/linkedin.png" alt="Moet ik nog bedenken">
+                </a>
+                <a href="#" class="portfolio__item">
+                    <img src="images/linkedin.png" alt="Moet ik nog bedenken">
+                </a>
+            </div>
+        </section>
+
+
+            <!-- Footer -->
         <footer>
-                <a href="https://www.linkedin.com/in/danielle-gouman-385a2114b/?originalSubdomain=nl" target="_blank"><img class = "linkedin" src="images/linkedin.png" alt="Linkedin logo"></a>
+            <a href="mailto:d.gouman98@hotmail.com" class="footer-link">d.gouman98@hotmail.com</a>
+            <ul class="social-list">
+                <li class="social-list__item"><a href="https://www.linkedin.com/in/danielle-gouman-385a2114b/?originalSubdomain=nl" class="social-list__link"><img src="images/linkedin.png" alt="Moet ik nog bedenken"></a></li>
+            </ul>
         </footer>
-
-    </div>
-</body>
+    </body>
 </html>

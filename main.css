@@ -139,7 +139,7 @@ header {
 }
 
 .logo {
-    max-width: 100px;
+    max-width: 150px;
 }
 
 .nav {
@@ -328,7 +328,7 @@ header {
         margin-right: auto;
     }
 
-    .service + .service {
+    .service {
         margin: 2em;
     }
 }
@@ -393,13 +393,13 @@ header {
 }
 
 .portfolio__item {
-    background: var(--clr-accent);
     overflow: hidden;
 }
 
 .portfolio__img {
     transition: transform 75ms cubic-bezier(0.5, 0, 0.5, 1),
     opacity 250ms linear;
+    padding: 0.5em;
 }
 
 .portfolio__item:focus {

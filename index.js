@@ -1,12 +1,21 @@
-const navToggle = document.querySelector('.nav-toggle');
-const navLinks = document.querySelectorAll('.nav__link')
+// const navToggle = document.querySelector('.toggle');
+// const navLinks = document.querySelectorAll('.menu')
 
-navToggle.addEventListener('click', () => {
-    document.body.classList.toggle('nav-open');
+// navToggle.addEventListener('click', () => {
+//     document.body.classList.toggle('menu-active');
+// });
+
+// navLinks.forEach(link => {
+//     link.addEventListener('click', () => {
+//         document.body.classList.remove('nav-open');
+//     })
+// })
+
+
+$('.toggle').on('click', function() {
+	$('.menu').toggleClass('active');
 });
 
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        document.body.classList.remove('nav-open');
-    })
-})
+$('.nav__link').on('click', function() {
+	$('.menu').removeClass('active');
+});

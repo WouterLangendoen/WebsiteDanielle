@@ -1,21 +1,32 @@
-// const navToggle = document.querySelector('.toggle');
-// const navLinks = document.querySelectorAll('.menu')
+const navSlide = () => {
+	const burger = document.querySelector('.burger');
+	const nav = document.querySelector('.nav-links');
+	const navLinks = document.querySelectorAll('.nav-links li');
+	
+	
+	burger.addEventListener('click', ()=> {
+		// Toggle nav
+		nav.classList.toggle('nav-active');
+		
+		
+		// Animate links
+		navLinks.forEach((link, index) => {
+			if(link.style.animation){
+				link.style.animation = '';
+			} else {
+				link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.2}s`;
+			}
+		});
 
-// navToggle.addEventListener('click', () => {
-//     document.body.classList.toggle('menu-active');
-// });
+		// Burger animation
 
-// navLinks.forEach(link => {
-//     link.addEventListener('click', () => {
-//         document.body.classList.remove('nav-open');
-//     })
-// })
+		burger.classList.toggle('toggle');
+	});
+}
 
 
-$('.toggle').on('click', function() {
-	$('.menu').toggleClass('active');
-});
+const app = () => {
+	navSlide();
+}
 
-$('.nav__link').on('click', function() {
-	$('.menu').removeClass('active');
-});
+app();

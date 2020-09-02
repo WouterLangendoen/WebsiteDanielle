@@ -29,7 +29,7 @@
     :root {
         --fs-h1: 4.5rem;
         --fs-h2: 3.75rem;
-        --fs-h3: 1.5rem;
+        --fs-h3: 1.25rem;
         --fs-body: 1.125rem;
     }
 }
@@ -135,6 +135,7 @@ h3 {
 
 .logo {
     color: var(--clr-light);
+    text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 5px;
     font-size: 22px;
@@ -180,7 +181,7 @@ nav{
     position: relative;
   }
 
-/* .nav {
+.nav {
     position: fixed;
     background: var(--clr-dark);
     color: var(--clr-light);
@@ -241,7 +242,7 @@ nav{
         height: 92vh;
         top: 8vh;
         background-color: var(--clr-accent);
-        display: flex;
+        display: none;
         flex-direction: column;
         align-items: center;
         z-index: 9999;
@@ -259,6 +260,7 @@ nav{
 
 .nav-active{
     transform: translateX(0%);
+    display: flex;
 }
 
 @keyframes navLinkFade{
@@ -296,6 +298,10 @@ nav{
 
 .intro__img {
     box-shadow: var(--bs);
+}
+
+.cvlink {
+    color: var(--clr-accent);
 }
 
 @media (min-width: 600px) {
@@ -378,8 +384,10 @@ nav{
     }
 }
 
+
+/* Wie ben ik */
 .about-me {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 

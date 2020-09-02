@@ -6,7 +6,7 @@
 
 /* Font settings en welke je wilt grebruiken */
 :root {
-    --f-sans: "Times New Roman", Times, serif;
+    --ff-sans: "Poppins", sans-serif;
     --ff-secondary: "Lucida Console", Courier, monospace;
 
     --fw-reg: 300;
@@ -47,6 +47,7 @@ body {
     font-family: var(--ff-sans);
     font-size: var(--fs-body);
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 section {
@@ -132,63 +133,20 @@ h3 {
 
 /* Header */
 
-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 1em;
-}
-
 .logo {
-    max-width: 150px;
+    color: var(--clr-light);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 22px;
 }
 
 /* Menu */
 
-.menu {
-    height: 70px;
-    width: 70px;
-    right: 70px;
-    top: 20px;
-    text-align: center;
-    position: absolute;
-    overflow: hidden;
-    transition: all 0.2s ease;
-    z-index: 999;
-  }
-  .menu.active {
-    width: calc(100% - 140px);
-  }
-  .menu.active .menuContent * {
-    opacity: 1;
-  }
-  .menu.active span i:nth-child(1) {
-    transform: rotate(-45deg) translate(-50%, -50%);
-    top: 50%;
-  }
-  .menu.active span i:nth-child(2) {
-    transform: translateX(-100px);
-    opacity: 0;
-  }
-  .menu.active span i:nth-child(3) {
-    transform: rotate(45deg) translate(-50%, -50%);
-    top: 50%;
-  }
-  .menu span {
-    width: 70px;
-    height: 70px;
-    position: absolute;
-    right: 0;
-    cursor: pointer;
-    z-index: 1;
-  }
-  .menu span i {
-    position: absolute;
-    transform-origin: 50% 50%;
-    width: 45%;
-    height: 2px;
-    left: 0;
-    right: 0;
-    margin: auto;
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
     background-color: var(--clr-accent);
     transition: transform 0.3s ease, opacity 0.1s ease 0.1s;
   }
@@ -221,40 +179,6 @@ header {
     cursor: pointer;
     position: relative;
   }
-  .menu .menuContent ul li:hover:before {
-    opacity: 0.8;
-    top: 13px;
-    left: 20px;
-  }
-  .menu .menuContent ul li:hover:after {
-    opacity: 0.8;
-    bottom: 13px;
-    left: -20px;
-  }
-  .menu .menuContent ul li:before, .menu .menuContent ul li:after {
-    content: "";
-    position: absolute;
-    width: 20px;
-    height: 2px;
-    background: var(--clr-dark);
-    transition: all 0.3s ease;
-  }
-  .menu .menuContent ul li:before {
-    transform: rotate(-55deg);
-    left: 60px;
-    top: -30px;
-    opacity: 0;
-    right: 0;
-    margin: auto;
-  }
-  .menu .menuContent ul li:after {
-    transform: rotate(-55deg);
-    left: -60px;
-    bottom: -30px;
-    opacity: 0;
-    right: 0;
-    margin: auto;
-  }
 
 /* .nav {
     position: fixed;
@@ -270,88 +194,95 @@ header {
     transition: transform 250ms cubic-bezier(0.5,0,0.5,1);
 }
 
-.nav__list {
-    list-style: none;
+.nav-links{
     display: flex;
-    height: 100%;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-} */
+    justify-content: space-around;
+    width: 50%;
+}
 
-.nav__link {
-    color: inherit;
-    font-weight: var(--fw-reg);
-    font-size: var(--fs-h4);
+.nav-links li{
+    list-style: none;
+}
+
+.nav-links a{
+    color: var(--clr-light);
     text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
 }
 
-.nav__link:hover {
-    color: var(--clr-dark);
-}
-
-/*.nav-toggle {
-    padding: 0.5em;
-    background: transparent;
-    border: 0;
+.burger{
+    display: none;
     cursor: pointer;
-    position: absolute;
-    right: 1em;
-    top: 1em;
-    z-index: 1000;
 }
 
-.nav-open .nav{
-    transform: translateX(0);
-}
-
-.nav-open .nav-toggle {
-    position: fixed;
-}
-
-.nav-open .hamburger {
-    transform: rotate(0.625turn);
-}
-
-.nav-open .hamburger::before {
-    transform: rotate(90deg) translateX(-6px);
-}
-
-.nav-open .hamburger::after {
-    opacity: 0;
-} */
-
-/* Hamburger */
-
-/* .hamburger {
-    display: block;
-    position: relative;
-}
-
-.hamburger,
-.hamburger::before,
-.hamburger::after {
-    background: var(--clr-accent);
-    width: 2em;
+.burger div{
+    width: 25px;
     height: 3px;
-    border-radius: 1em;
-    transition: transform 250ms ease-in-out;
+    background-color: var(--clr-light);
+    margin: 5px;
+    transition: all 0.3s ease;
 }
 
-.hamburger::before,
-.hamburger::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
+@media screen and (max-width:1300px){
+    .nav-links{
+        width: 60%;
+    }
 }
 
-.hamburger::before { top: 6px;}
+@media screen and (max-width:1000px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: var(--clr-accent);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 9999;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+    }
+}
 
-.hamburger::after { bottom: 6px;} */
+.nav-active{
+    transform: translateX(0%);
+}
 
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: translateY(8px) rotate(-45deg);
+}
+
+.toggle .line2{
+    opacity: 0;
+}
+
+.toggle .line3{
+    transform: translateY(-8px) rotate(45deg);
+}
 
 /* Introductie section */
 

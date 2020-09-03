@@ -540,6 +540,10 @@ nav{
         background: var(--clr-accent);
     }
 
+    .w-100 {
+        height: 50vh;
+    }
+
     .carousel-caption h5 {
         font-size: 25px;
     }
